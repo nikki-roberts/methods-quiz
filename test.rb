@@ -4,19 +4,19 @@ require './methods_quiz'
 # TODO - write tests here
 describe 'methods-quiz' do 
 
-	describe 'has_teen?'
-		it '12 is not a teen' do
-			has_teen?(12).must_equal(false)
-		end
+	# describe 'has_teen?'
+	# 	it '12 is not a teen' do
+	# 		has_teen?(12, 13, 14).must_equal(false, true, true)
+	# 	end
 
-		it '16 is a teen' do
-			has_teen(16).must_equal(true)
-		end
+	# 	it '16 is a teen' do
+	# 		has_teen(16, 19, 20).must_equal(true, true, false)
+	# 	end
 
-		it 'abc is invalid input' do
-			has_teen("abc").must_equal("invalid input")
-		end
-	end
+	# 	it 'abc is invalid input' do
+	# 		has_teen("abc", "def", "sddf").must_equal("invalid input")
+	# 	end
+	# end
 
 	describe 'not-string'
 		it 'this is a string (add not)' do
@@ -29,5 +29,3 @@ describe 'methods-quiz' do
 			not_string(12345).must_equal("invalid input")
 		end
 	end
-
-end
