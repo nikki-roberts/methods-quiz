@@ -14,8 +14,20 @@ describe 'methods-quiz' do
 		end
 
 		it 'abc is invalid input' do
-			has_teen("abc").must_equal(false)
+			has_teen("abc").must_equal("invalid input")
 		end
 	end
-	
+
+	describe 'not-string'
+		it 'this is a string (add not)' do
+			not_string("this is a string").must_equal("not this is a string")
+		end
+		it 'not a good idea (return the same)' do 
+			not_string("not a good idea").must_equal("not a good idea")
+		end
+		it '12345' do
+			not_string(12345).must_equal("invalid input")
+		end
+	end
+
 end
