@@ -14,7 +14,7 @@ def has_teen?(age1, age2, age3)
 	elsif age2 != teen_ages
 		return false
 	end
-	
+
 	if age3 == teen_ages
 		return true
 	elsif age3 != teen_ages
@@ -33,7 +33,19 @@ def not_string(string)
 
 end
 # TODO - write icy_hot?
+def icy_hot?(temp1, temp2)
+	
+	if temp1 < 0
+		return true
+	end
 
+	if temp1 > 0
+		if temp2 > 0
+			return false
+		end
+	end
+		
+end
 # TODO - write closer_to
 
 # TODO - write two_as_one?

@@ -28,7 +28,7 @@ describe 'methods-quiz' do
 		it '12345' do
 			not_string(12345).must_equal("invalid input")
 		end
-	end
+	
 
 	describe 'icy_hot?'
 		it 'true when both are icy' do
@@ -43,5 +43,5 @@ describe 'methods-quiz' do
 		it 'false when both are hot' do
 			icy_hot?(false, false).must_equal(false)
 		end
-	end
+
 
