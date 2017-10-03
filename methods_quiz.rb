@@ -2,50 +2,53 @@
 # TODO - write has_teen?
 def has_teen?(a, b, c)
 
-	if a == 13 || 14 || 15 || 16 || 17 || 18 || 19
+	if a == 13 || a == 14 || a == 15 || a == 16 || a == 17 || a == 18 || a == 19
 		return true
 	end
-	if b == 13 || 14 || 15 || 16 || 17 || 18 || 19
+	if b == 13 || b == 14 || b == 15 || b == 16 || b == 17 || b == 18 || b == 19
 		return true
 	end
-	if c == 13 || 14 || 15 || 16 || 17 || 18 || 19
+	if c == 13 || c == 14 || c == 15 || c == 16 || c == 17 || c == 18 || c == 19
 		return true
 	end
+	return false
 
 end
 # TODO - write not_string
 def not_string(string)
 
 	if string[0..2] == "not"
-		return "#{string}"
+		return string
 	elsif string[0..2] != "not"
-		return "not #{string}"
+		return "not"+string
 	end
 
 end
 # TODO - write icy_hot?
 def icy_hot?(temp1, temp2)
 	
-	if temp1 < 0
-		return true
+	if temp1 < 0 
+		if temp2 > 100
+			return true
+		end
+		return false
 	end
 
 	if temp2 < 0
-		return true
+		if temp1 > 100
+			return true
+		end
+		return false
 	end
 
-	if temp1 > 0
-		if temp2 > 0
-			return false
-		end
-	end
-		
+	return false
+
 end
 # TODO - write closer_to
 def closer_to(guess, a, b)
 
-	distance_a = guess - a
-	distance_b = guess - b
+	distance_a = (guess - a).abs
+	distance_b = (guess - b).abs
 
 	if distance_b > distance_a
 		return a

@@ -5,7 +5,6 @@ require './methods_quiz'
 describe 'methods-quiz' do 
 
 	describe 'has_teen?' do
-
 		it 'has a teen' do
 			has_teen?(12, 13, 14).must_equal(true)
 		end
@@ -14,6 +13,9 @@ describe 'methods-quiz' do
 			has_teen?(6, 41, 20).must_equal(false)
 		end
 
+		it 'abc is invalid input' do
+			has_teen?("abc", "def", "sddf").must_equal(false)
+		end
 	end
 
 	describe 'not-string' do
@@ -24,6 +26,10 @@ describe 'methods-quiz' do
 		it 'not a good idea (return the same)' do 
 			not_string("not a good idea").must_equal("not a good idea")
 		end
+		it '12345' do
+			not_string("12345").must_equal("invalid input")
+		end
+		# how do i fix this last one
 		
 	end
 
@@ -40,7 +46,6 @@ describe 'methods-quiz' do
 		it 'false when both are hot' do
 			icy_hot?(50, 102).must_equal(false)
 		end
-		
 	end
 
 	describe 'closer_to' do
@@ -55,7 +60,7 @@ describe 'methods-quiz' do
 			closer_to(9, 11, 4).must_equal(11)
 		end
 
-		# need invalid input test
+		# need invalid input function
 	end
 
 	describe 'two_as_one?' do 
@@ -69,7 +74,7 @@ describe 'methods-quiz' do
 			two_as_one?(5, 5, 0).must_equal(true)
 		end
 
-		# need invalid input test
+		# need invalid input function
 	end
 end
 
