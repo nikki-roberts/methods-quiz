@@ -1,20 +1,18 @@
   
 # TODO - write has_teen?
-def has_teen?(age1, age2, age3)
+def has_teen?(a, b, c)
 	teen_ages = [13, 14, 15, 16, 17, 18, 19]
 
-	if age1 == teen_ages
-		return true
+	if a != teen_ages
+		if b != teen_ages
+			if c == teen_ages
+				return false
+			end
+		end
 	end
-	if age2 == teen_ages
-		return true
-	end
-	if age3 == teen_ages
-		return true
-	end
-	if age1 || age2 || age3 != teen_ages
-		return false
-	end
+	# if age1 || age2 || age3 != teen_ages
+	# 	return false
+	# end
 
 end
 # TODO - write not_string
@@ -33,7 +31,7 @@ def icy_hot?(temp1, temp2)
 	if temp1 < 0
 		return true
 	end
-	
+
 	if temp2 < 0
 		return true
 	end

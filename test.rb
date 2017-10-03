@@ -19,31 +19,48 @@ describe 'methods-quiz' do
 	# end
 
 	# describe 'not-string' do
-	# 	it 'this is a string (add not)' do
-	# 		not_string("this is a string").must_equal("not this is a string")
+
+	# 	it 'a very good idea (add not)' do
+	# 		not_string("a very good idea").must_equal("not a very good idea")
 	# 	end
 	# 	it 'not a good idea (return the same)' do 
 	# 		not_string("not a good idea").must_equal("not a good idea")
 	# 	end
 	# 	it '12345' do
-	# 		not_string(12345).must_equal("invalid input")
+	# 		not_string("12345").must_equal("invalid input")
+	# 	end
+	# 	# how do i fix this last one
+		
+	# end
+
+	# describe 'icy_hot?' do
+	# 	it 'true when both are icy' do
+	# 		icy_hot?(-43, -5).must_equal(true)
+	# 	end
+	# 	it 'true when one is icy' do
+	# 		icy_hot?(-5, 150).must_equal(true)
+	# 	end
+	# 	it 'true when other one is icy' do
+	# 		icy_hot?(200, -17).must_equal(true)
+	# 	end
+	# 	it 'false when both are hot' do
+	# 		icy_hot?(50, 102).must_equal(false)
 	# 	end
 	# end
 
-	describe 'icy_hot?' do
-		it 'true when both are icy' do
-			icy_hot?(-43, -5).must_equal(true)
-		end
-		it 'true when one is icy' do
-			icy_hot?(-5, 150).must_equal(true)
-		end
-		it 'true when other one is icy' do
-			icy_hot?(200, -17).must_equal(true)
-		end
-		it 'false when both are hot' do
-			icy_hot?(213, 102).must_equal(false)
-		end
-	end
+	describe 'closer_to' do
 
+		it '7 is closer to 10 than 3' do
+			closer_to(10, 7, 3).must_equal(7)
+		end
+		it '5 and 5 are same distance to 11' do 
+			closer_to(11, 5, 5).must_equal(0)
+		end
+		it '11 is closer to 9 than 4' do
+			closer_to(9, 11, 4).must_equal(11)
+		end
+		
+		# need invalid input function
+	end
 end
 
