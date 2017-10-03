@@ -64,13 +64,13 @@ describe 'methods-quiz' do
 	# end
 
 	describe 'two_as_one?' do 
-		it '7 + 3 = 10'
+		it '7 + 3 = 10' do
 			two_as_one?(10, 3, 7).must_equal(true)
 		end
-		it '4 + 2 != 3'
+		it '4 + 2 != 3' do
 			two_as_one(4, 2, 3).must_equal(false)
 		end
-		it '5 + 0 = 5'
+		it '5 + 0 = 5' do
 			two_as_one(5, 5, 0).must_equal(true)
 		end
 
