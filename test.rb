@@ -48,18 +48,32 @@ describe 'methods-quiz' do
 	# 	end
 	# end
 
-	describe 'closer_to' do
+	# describe 'closer_to' do
 
-		it '7 is closer to 10 than 3' do
-			closer_to(10, 7, 3).must_equal(7)
+	# 	it '7 is closer to 10 than 3' do
+	# 		closer_to(10, 7, 3).must_equal(7)
+	# 	end
+	# 	it '5 and 5 are same distance to 11' do 
+	# 		closer_to(11, 5, 5).must_equal(0)
+	# 	end
+	# 	it '11 is closer to 9 than 4' do
+	# 		closer_to(9, 11, 4).must_equal(11)
+	# 	end
+
+	# 	# need invalid input function
+	# end
+
+	describe 'two_as_one?' do 
+		it '7 + 3 = 10'
+			two_as_one?(10, 3, 7).must_equal(true)
 		end
-		it '5 and 5 are same distance to 11' do 
-			closer_to(11, 5, 5).must_equal(0)
+		it '4 + 2 != 3'
+			two_as_one(4, 2, 3).must_equal(false)
 		end
-		it '11 is closer to 9 than 4' do
-			closer_to(9, 11, 4).must_equal(11)
+		it '5 + 0 = 5'
+			two_as_one(5, 5, 0).must_equal(true)
 		end
-		
+
 		# need invalid input function
 	end
 end
