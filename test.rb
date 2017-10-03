@@ -68,10 +68,10 @@ describe 'methods-quiz' do
 			two_as_one?(10, 3, 7).must_equal(true)
 		end
 		it '4 + 2 != 3' do
-			two_as_one(4, 2, 3).must_equal(false)
+			two_as_one?(4, 2, 3).must_equal(false)
 		end
 		it '5 + 0 = 5' do
-			two_as_one(5, 5, 0).must_equal(true)
+			two_as_one?(5, 5, 0).must_equal(true)
 		end
 
 		# need invalid input function
