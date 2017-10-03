@@ -1,18 +1,16 @@
   
 # TODO - write has_teen?
 def has_teen?(a, b, c)
-	teen_ages = [13, 14, 15, 16, 17, 18, 19]
 
-	if a != teen_ages
-		if b != teen_ages
-			if c == teen_ages
-				return false
-			end
-		end
+	if a == 13 || 14 || 15 || 16 || 17 || 18 || 19
+		return true
 	end
-	# if age1 || age2 || age3 != teen_ages
-	# 	return false
-	# end
+	if b == 13 || 14 || 15 || 16 || 17 || 18 || 19
+		return true
+	end
+	if c == 13 || 14 || 15 || 16 || 17 || 18 || 19
+		return true
+	end
 
 end
 # TODO - write not_string
@@ -45,6 +43,7 @@ def icy_hot?(temp1, temp2)
 end
 # TODO - write closer_to
 def closer_to(guess, a, b)
+
 	distance_a = guess - a
 	distance_b = guess - b
 
@@ -57,9 +56,11 @@ def closer_to(guess, a, b)
 	if distance_a == distance_b
 		return 0
 	end
+
 end
 # TODO - write two_as_one?
 def two_as_one?(a, b, c)
+
 	if a + b == c
 		return true
 	end
@@ -71,4 +72,5 @@ def two_as_one?(a, b, c)
 	end
 
 	return false
+	
 end
